@@ -1,0 +1,11 @@
+<h2>Votos de los personajes</h2>
+<hr>
+<app-loading *ngIf="characterList.length==0"></app-loading>
+<div class="row" *ngIf="characterList.length>0" >
+  <div class="col-lg-9">
+    <app-pie-chart [characterList]="characterList"></app-pie-chart>
+  </div>
+  <div class="col-lg-2">
+    <button class="btn btn-outline-info btn-block m-2" *ngFor="let character of characterList" (click)="addVote(character.id)">{{character.name}}</button>
+  </div>
+</div>

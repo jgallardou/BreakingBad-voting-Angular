@@ -1,0 +1,8 @@
+<div class="card mb-3 ">
+  <img class="card-img-top" alt="..." [src]="character.photo" onerror="this.src='/assets/default.webp '">
+  <div class="card-body">
+    <h5 class="card-title">{{character.name}}</h5>
+    <p class="card-text">{{character.description | slice:0:240 }}.... </p>
+    <button class="btn btn-outline-info" (click)="goCharacter(character.id)">Ver mas detalle</button>
+  </div>
+</div>

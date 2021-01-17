@@ -1,0 +1,9 @@
+<h2>Lista de personajes</h2>
+<hr>
+<app-loading *ngIf="this.loading"></app-loading>
+
+<div class="row animated fadeIn" *ngIf="charactersArray.length>0 && !loading">
+  <div class="col-lg-4" *ngFor="let character of charactersArray">
+    <app-card [character]="character"></app-card>
+  </div>
+</div>
